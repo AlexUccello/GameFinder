@@ -15,7 +15,7 @@ async function cerca(){
         html += "</div>";
     });
 
-    document.getElementById("results").innerHTML += html;
+    document.getElementById("results").innerHTML = html;
 
  }else{
     return "";
