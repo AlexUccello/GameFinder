@@ -8,7 +8,7 @@ async function cerca(){
     html = "";
     data.forEach(game => {
         html += "<div class='game'>";
-        html += "<img src=" + game.thumb + ">";
+        html += "<img src=" + game.thumb + " style='width: 25%; height: auto;'>";
         html += "<h3>" + game.external + "</h3>";
         html += "<p>Prezzo: " + game.cheapest + "</p>";
         html += "<a href='https://www.cheapshark.com/redirect?dealID=" + game.dealID + "'>Vai al sito</a>";
