@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,8 +8,8 @@
     <h1>Game Finder</h1>
     <p>Trova i migliori giochi con sconti esclusivi!</p>
     <h2>Ricerca per Nome</h2>
-    <input type="text" placeholder="Inserisci il nome del gioco">
-    <button>CERCA</button>
+    <input type="text" placeholder="Inserisci il nome del gioco" id="searchInput">
+    <button onclick="cerca()">CERCA</button>
     <h2>Siti Affidabili</h2>
         <a href="https://store.steampowered.com/?l=italian">Steam</a>
         <a href="https://www.epicgames.com/store/it/">Epic Games Store</a>
@@ -18,34 +17,8 @@
         <a href="https://www.microsoft.com/it-it/store/b/xbox">Microsoft Store</a>
         <a href="https://www.rockstargames.com/">Rockstar Games</a>
     <h2>Giochi in Evidenza</h2>
-    <table border="3px solid white" style="border-collapse: collapse; align: center; margin: 0 auto;">
-  <tr>
-    <th>Gioco</th>
-    <th>Prezzo</th>
-    <th>Sconto</th>
-    <th>Sito</th>
-    <th>Tag</th>
-  </tr>
-  <tr>
-    <td>Minecraft</td>
-    <td>29.99</td>
-    <td>15% (25.49)</td>
-    <td>Microsoft Store</td>
-    <td>Avventura, Creativo</td>
-  </tr>
-  <tr>
-    <td>GTA V</td>
-    <td>59.99</td>
-    <td>20% (47.99)</td>
-    <td>Rockstar Games</td>
-    <td>Azione, Open World</td>
-  </tr>
-    <td>Call of Duty: Black Ops 2</td>
-    <td>59.99</td>
-    <td>75% (15.99)</td>
-    <td>Steam</td>
-    <td>Azione, Strategia, FPS</td>
-</table>
+
+<div id="results"></div>
 <h2>Tag</h2>
 <h4>Cerca giochi in base al tag assegnato</h4>
     <button>Tag: Horror</button>
@@ -63,4 +36,5 @@
     <br>
 
 </body>
+<script src="script.js"></script>
 </html>
