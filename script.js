@@ -12,9 +12,8 @@ async function cerca(){
     data.forEach(game => {
         html += "<div class='game' onclick=\"clickGioco("+ game.gameID + ")\">";
         html += "<img src=" + game.thumb + " class=\"thumb\">";
-        html += "<h3 class=\"title\">" + game.external + "</h3>";
+        html += "<a href=\"https://www.cheapshark.com/redirect?dealID=" + game.cheapestDealID + "\" class=\"title\">" + game.external + "</a>";
         html += "<p class=\"price\">Prezzo: " + game.cheapest + "</p>";
-        html += "<a class=\"link\" href='https://www.cheapshark.com/redirect?dealID=" + game.dealID + "'>Vai al sito</a>";
         html += "</div>";
     });
     console.log(data);

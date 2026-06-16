@@ -22,7 +22,7 @@ body {
     border: 2px solid black;
     border-radius: 10px;
     margin-bottom: 37px;
-    background: #63636354;
+    background: rgba(250, 157, 95, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +31,7 @@ body {
 }
 
 .game:hover{
-    background-color: aquamarine;
+    background-color:   rgba(250, 157, 95, 0.5);
 }
 
 .game .thumb{
