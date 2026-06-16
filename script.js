@@ -5,19 +5,26 @@ async function cerca(){
 
     const data = await response.json();
 
+    if(data < 1){
+        alert("nessun gioco");
+    }
     html = "";
     data.forEach(game => {
-        html += "<div class='game'>";
-        html += "<img src=" + game.thumb + " style='width: 25%; height: auto;'>";
-        html += "<h3>" + game.external + "</h3>";
-        html += "<p>Prezzo: " + game.cheapest + "</p>";
-        html += "<a href='https://www.cheapshark.com/redirect?dealID=" + game.dealID + "'>Vai al sito</a>";
+        html += "<div class='game' onclick=\"clickGioco("+ game.gameID + ")\">";
+        html += "<img src=" + game.thumb + " class=\"thumb\">";
+        html += "<h3 class=\"title\">" + game.external + "</h3>";
+        html += "<p class=\"price\">Prezzo: " + game.cheapest + "</p>";
+        html += "<a class=\"link\" href='https://www.cheapshark.com/redirect?dealID=" + game.dealID + "'>Vai al sito</a>";
         html += "</div>";
     });
-
+    console.log(data);
     document.getElementById("results").innerHTML = html;
 
  }else{
     return "";
  }
+}
+
+function clickGioco(id){
+    alert(id);
 }
