@@ -2,10 +2,10 @@
 nav {
     background-color: rgb(18, 92, 252); 
     text-align: center; 
-    text-decoration: black; 
+    color: black; 
     padding: 15px; 
     border: 5px solid; 
     border-color: rgb(18, 92, 252);
-    width: 35%; 
+    width: 100%; 
     margin: auto;
 }
