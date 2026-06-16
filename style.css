@@ -1,17 +1,45 @@
 
 nav {
-    background-color: rgba(248, 128, 47, 0.5); 
-    text-align: center; 
-    color: black; 
-    padding: 15px; 
-    border: 3px solid; 
+    background-color: rgba(248, 128, 47, 0.5);
+    text-align: center;
+    color: black;
+    padding: 15px;
+    border: 3px solid;
     border-color: rgb(0, 0, 0);
     border-radius: 10px;
-    width: 40%; 
+    width: 40%;
     margin: auto;
 }
 body {
-    background-image: url("https://images.wallpapersden.com/image/download/surreal-sunset-minimal-4k_bWllaGeUmZqaraWkpJRqZmdlrWdtbWU.jpg");   
+    background-image: url("https://images.wallpapersden.com/image/download/surreal-sunset-minimal-4k_bWllaGeUmZqaraWkpJRqZmdlrWdtbWU.jpg");
     background-size: cover;
     background-attachment: fixed;
+}
+
+.game{
+    height: 200px;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 37px;
+    background: #63636354;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+    cursor: pointer;
+}
+
+.game:hover{
+    background-color: aquamarine;
+}
+
+.game .thumb{
+    width: 70px;
+    height: 70px;
+}
+
+.game .title{
+    text-decoration: underline;
+    font-size: 2rem;
 }
