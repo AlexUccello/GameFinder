@@ -1,11 +1,17 @@
 
 nav {
-    background-color: rgb(18, 92, 252); 
+    background-color: rgba(248, 128, 47, 0.5); 
     text-align: center; 
     color: black; 
     padding: 15px; 
     border: 5px solid; 
-    border-color: rgb(18, 92, 252);
-    width: 100%; 
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 25%; 
     margin: auto;
+}
+body {
+    background-image: url("https://images.wallpapersden.com/image/download/surreal-sunset-minimal-4k_bWllaGeUmZqaraWkpJRqZmdlrWdtbWU.jpg");   
+    background-size: cover;
+    background-attachment: fixed;
 }
