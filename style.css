@@ -34,9 +34,9 @@ body {
     background-color:   rgba(250, 157, 95, 0.5);
 }
 
-.game .thumb{
-    width: 70px;
-    height: 70px;
+.game .thumb {
+    width: 180px;
+    height: 150px;
 }
 
 .game .title{
