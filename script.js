@@ -23,7 +23,3 @@ async function cerca(){
     return "";
  }
 }
-
-function clickGioco(id){
-    alert(id);
-}
