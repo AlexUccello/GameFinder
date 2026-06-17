@@ -39,4 +39,3 @@ async function cerca(){
 function clickGioco(id){
     alert(id);
 }
-

@@ -14,6 +14,7 @@ body {
     background-image: url("https://images.wallpapersden.com/image/download/surreal-sunset-minimal-4k_bWllaGeUmZqaraWkpJRqZmdlrWdtbWU.jpg");
     background-size: cover;
     background-attachment: fixed;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .game{
@@ -28,10 +29,20 @@ body {
     align-items: center;
     gap: 90px;
     cursor: pointer;
+    animation: hovergioco 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+}
+
+@keyframes hovergioco{
+    from {background-color: rgba(250, 157, 95, 0.3);}
+    to {background-color: rgba(252, 174, 122, 0.63);}
 }
 
 .game:hover{
-    background-color:   rgba(250, 157, 95, 0.5);
+    background-color:   rgba(252, 174, 122, 0.63);
+    animation: hovergioco 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+
 }
 
 .game .thumb {
