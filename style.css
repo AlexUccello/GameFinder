@@ -65,3 +65,15 @@ body {
 	      0%{left:50%; top:70px;}
 	      100%{left:50%; top:70px;}    
 }
+
+.notfound{
+    background-color:white;
+    text-align: center;
+    color:black;
+    padding: 15px;
+    border: 3px solid;
+    border-color: rgb(0, 0, 0);
+    height: 40px;
+    width: 300px;
+    margin: auto;
+}
