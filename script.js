@@ -40,3 +40,8 @@ function clickGioco(id){
     alert(id);
 }
 
+document.getElementById("searchInput").addEventListener("keyup", function(e) {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+        cerca();
+    }
+});

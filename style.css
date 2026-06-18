@@ -9,12 +9,15 @@ nav {
     border-radius: 10px;
     width: 40%;
     margin: auto;
+    font-size: 1.2rem;  
 }
+
 body {
     background-image: url("https://images.wallpapersden.com/image/download/surreal-sunset-minimal-4k_bWllaGeUmZqaraWkpJRqZmdlrWdtbWU.jpg");
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
     text-align: center;
     color: white;
 }
@@ -38,6 +41,11 @@ body {
 @keyframes hovergioco{
     from {background-color: rgba(250, 157, 95, 0.3);}
     to {background-color: rgba(252, 174, 122, 0.63);}
+}
+
+@keyframes hoversiti{
+    from {background-color: rgba(248, 128, 47, 0.5);}
+    to {background-color: rgba(248, 128, 47, 0.8);}
 }
 
 .game:hover{
@@ -89,4 +97,31 @@ body {
     height: 40px;
     width: 300px;
     margin: auto;
+}
+
+.search{
+    background-color: rgba(255, 226, 207, 0.5);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    border: 3px solid;
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 20%;
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+.cerca{
+    background-color: rgba(248, 128, 47, 0.5);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    border: 3px solid;
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    height: 6%;
+    width: 5%;
+    margin: auto;
+    font-size: 1rem;
 }

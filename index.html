@@ -9,13 +9,11 @@
     <h1>Game Finder</h1>
     <p style="font-size: 18px;">Trova i migliori giochi con sconti esclusivi!</p>
     <h2>Ricerca per Nome</h2>
-    <form action>
-    <input type="search" placeholder="Inserisci il nome del gioco" id="searchInput" style="padding: 10px; width: 300px; border-radius: 5px; border: 2px solid #333; font-size: 16px;">
-    <button onclick="cerca()" style="padding: 10px; background-color: rgb(248, 128, 47); color: white; border: 2px solid rgb(0, 0, 0); border-radius: 5px; cursor: pointer;">CERCA</button>
-    </form>
+    <input class="search" placeholder="Inserisci il nome del gioco" id="searchInput">
+    <button class = "cerca" onclick="cerca()">CERCA</button>
     <h2>Siti Affidabili</h2>
         <nav>
-        <a href="https://store.steampowered.com/?l=italian" target="_blank"; style="color: white;">Steam</a> |
+        <a href="https://store.steampowered.com/?l=italian" target="_blank"; style="color: white; ">Steam</a> |
         <a href="https://www.epicgames.com/store/it/" target="_blank" style="color: white;">Epic Games Store</a> |
         <a href="https://www.gog.com/" target="_blank" style="color: white;">GOG</a> |
         <a href="https://www.microsoft.com/it-it/store/b/xbox" target="_blank" style="color: white;">Microsoft Store</a> |
@@ -23,7 +21,7 @@
         </nav>
     <h2>Giochi in Evidenza</h2>
 <div id="results"></div>
-
+<div class="loader"></div>
 </body>
 <script src="script.js"></script>
 </html>
