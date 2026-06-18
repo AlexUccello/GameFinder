@@ -43,11 +43,6 @@ body {
     to {background-color: rgba(252, 174, 122, 0.63);}
 }
 
-@keyframes hoversiti{
-    from {background-color: rgba(248, 128, 47, 0.5);}
-    to {background-color: rgba(248, 128, 47, 0.8);}
-}
-
 .game:hover{
     background-color:   rgba(252, 174, 122, 0.63);
     animation: hovergioco 0.5s ease-in-out;
