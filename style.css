@@ -90,3 +90,28 @@ body {
     width: 300px;
     margin: auto;
 }
+
+.search{
+    background-color: rgba(255, 226, 207, 0.5);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    border: 3px solid;
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 20%;
+    margin: auto;
+}
+
+.cerca{
+    background-color: rgba(248, 128, 47, 0.5);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    border: 5   px solid;
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    height: 5.5%;
+    width: 5%;
+    margin: auto;
+}
