@@ -37,7 +37,7 @@ async function cerca(){
 }
 
 function clickGioco(id){
-    alert(id);
+    window.open("dettagli.html?id=" + id, "_blank");
 }
 
 document.getElementById("searchInput").addEventListener("keyup", function(e) {
