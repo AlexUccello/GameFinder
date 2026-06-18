@@ -9,10 +9,8 @@
     <h1>Game Finder</h1>
     <p style="font-size: 18px;">Trova i migliori giochi con sconti esclusivi!</p>
     <h2>Ricerca per Nome</h2>
-    <form action>
-    <input type="search" class="search" placeholder="Inserisci il nome del gioco" id="searchInput" onkeypress="cerca();">
+    <input class="search" placeholder="Inserisci il nome del gioco" id="searchInput">
     <button class = "cerca" onclick="cerca()">CERCA</button>
-    </form>
     <h2>Siti Affidabili</h2>
         <nav>
         <a href="https://store.steampowered.com/?l=italian" target="_blank"; style="color: white; ">Steam</a> |
@@ -23,7 +21,7 @@
         </nav>
     <h2>Giochi in Evidenza</h2>
 <div id="results"></div>
-
+<div class="loader"></div>
 </body>
 <script src="script.js"></script>
 </html>
