@@ -126,7 +126,7 @@ body {
     position: relative;
     display: inline-block;
     cursor: pointer;
-    background-color: #333;
+    background-color: #c75d1f94;
     color: #fff;
     padding: 10px;
     border-radius: 5px;
@@ -144,20 +144,4 @@ body {
     height: 90%;
     margin: auto;
     font-size: 1.2rem;  
-}
-
-.popup .popuptext{
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-}
-
-.popup .popupshow{
-    visibility: visible;
-    -webkit-animation: fadeIn 0.5s;
-    animation: fadeIn 0.5s;
 }
