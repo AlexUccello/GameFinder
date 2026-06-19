@@ -50,6 +50,9 @@ s.addEventListener("keyup", function(e) {
     }
 });
 
+//
+
+// Funzione per popolare la pagina dei dettagli del gioco
 async function popolaPagina(){
     const queryParams = new URLSearchParams(window.location.search);
     const id = queryParams.get('id');
@@ -60,39 +63,41 @@ async function popolaPagina(){
     const data = await response.json();
 
 
-
+// Costante che permette la popolazione della pagina Dettagli
     const stores = getStores();
     if(data.length < 1){
-        html += "<div class='notfound'>Nessun gioco trovato</div>";
+        html += "<div class='notfound'>Nessun gioco trovato</div>"; // Mostrato quando ID = 0
         document.getElementById("error").innerHTML = html;
     } else {
-        document.getElementById("ng").innerHTML = data.info.title;
-        document.getElementById("img").src = data.info.thumb;
-        document.getElementById("pr").innerHTML = data.cheapestPriceEver.price;
+        document.getElementById("ng").innerHTML = data.info.title; // nome del gioco
+        document.getElementById("img").src = data.info.thumb; // immagine del gioco
+        document.getElementById("pr").innerHTML = data.cheapestPriceEver.price; // prezzo più basso del gioco
 
 
         var html = "";
         var html_lista_stores = "";
-        const n = JSON.parse(stores);
+        const trovaStorePerID = JSON.parse(stores); // Converte l'array del JSON in una lista di oggetti JavaScript
 
         data.deals.forEach(store => {
-            html += '<p>' + store.price + '</>'; //store.storeID
+            html += '<p>' + store.price + '</>'; // Prezzo del gioco per ogni store
 
-            const trovato = n.find(store_l => store_l.storeID == store.storeID);
+            const cercaPerID = trovaStorePerID.find(store_l => store_l.storeID == store.storeID); // Trova il nome dello Store all'interno del JSON tramite il suo ID
 
-
+            // Popola la lista dei negozi all'interno della pagina Dettagli
             html_lista_stores +=
            `<div>
-                <p> ${trovato.storeName}</p>
+                <p> ${cercaPerID.storeName}</p>
            </div>`
 
         });
-        document.getElementById("stores").innerHTML = html_lista_stores;
+        document.getElementById("stores").innerHTML = html_lista_stores; // Lista dei negozi
     }
 
 
 }
 
+// Funzione per ottenere la lista dei negozi
+// Lista viene presa dal JSON che viene restituito dall'API di CheapShark
 async function getStores(){
     var response = await fetch("https://www.cheapshark.com/api/1.0/stores");
     const data = await response.json();
