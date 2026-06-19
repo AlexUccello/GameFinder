@@ -6,16 +6,16 @@
     <title>Dettagli Gioco</title>
 </head>
 <body>
-    <h1>Dettagli Gioco</h1>
-    <h2>Nome del Gioco: </h2>
-    <p class="title"></p>
-    <h2>Prezzo: </h2>
-    <p>Steam: <br>
-    Epic Games: <br>
-    GOG: <br>
-    Microsoft Store: <br>
-    </p>
-    <h2>Aggiungi ai Preferiti</h2>
+    <div id="error"></div>
+    <h2 id="ng"></h2>
+    <img id="img">
+    <h2 id="pr"></h2>
+    <div id="stores"></div>
 </body>
 <script src="script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    popolaPagina();
+});
+</script>
 </html>

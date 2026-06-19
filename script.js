@@ -42,8 +42,59 @@ function clickGioco(id){
     window.open("dettagli.html?id=" + id, "_blank");
 }
 
-document.getElementById("searchInput").addEventListener("keyup", function(e) {
+var s = document.getElementById("searchInput");
+if(s)
+s.addEventListener("keyup", function(e) {
     if (e.key === 'Enter' || e.keyCode === 13) {
         cerca();
     }
 });
+
+async function popolaPagina(){
+    const queryParams = new URLSearchParams(window.location.search);
+    const id = queryParams.get('id');
+    if(!id){return;}
+
+
+    var response = await fetch("https://www.cheapshark.com/api/1.0/games?id=" + id);
+    const data = await response.json();
+
+
+
+    const stores = getStores();
+    if(data.length < 1){
+        html += "<div class='notfound'>Nessun gioco trovato</div>";
+        document.getElementById("error").innerHTML = html;
+    } else {
+        document.getElementById("ng").innerHTML = data.info.title;
+        document.getElementById("img").src = data.info.thumb;
+        document.getElementById("pr").innerHTML = data.cheapestPriceEver.price;
+
+
+        var html = "";
+        var html_lista_stores = "";
+        const n = JSON.parse(stores);
+
+        data.deals.forEach(store => {
+            html += '<p>' + store.price + '</>'; //store.storeID
+
+            const trovato = n.find(store_l => store_l.storeID == store.storeID);
+
+
+            html_lista_stores +=
+           `<div>
+                <p> ${trovato.storeName}</p>
+           </div>`
+
+        });
+        document.getElementById("stores").innerHTML = html_lista_stores;
+    }
+
+
+}
+
+async function getStores(){
+    var response = await fetch("https://www.cheapshark.com/api/1.0/stores");
+    const data = await response.json();
+    return data;
+}
