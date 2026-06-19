@@ -9,7 +9,7 @@ nav {
     border-radius: 10px;
     width: 40%;
     margin: auto;
-    font-size: 1.2rem;  
+    font-size: 20px;  
 }
 
 body {
@@ -57,7 +57,7 @@ body {
 
 .game .title{
     text-decoration: underline;
-    font-size: 2rem;
+    font-size: 40px;
 }
 
 .loader {
@@ -104,7 +104,7 @@ body {
     border-radius: 10px;
     width: 20%;
     margin: auto;
-    font-size: 1.2rem;
+    font-size: 25px;
 }
 
 .cerca{
@@ -118,5 +118,32 @@ body {
     height: 6%;
     width: 5%;
     margin: auto;
-    font-size: 1rem;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.popup .popuptext{
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+}
+
+.popup .popupshow{
+    visibility: visible;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
 }

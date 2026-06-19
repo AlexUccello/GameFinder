@@ -19,6 +19,9 @@ async function cerca(){
                 html += "<img src=" + game.thumb + " class=\"thumb\">";
                 html += "<a href=\"https://www.cheapshark.com/redirect?dealID=" + game.cheapestDealID + "\" class=\"title\" target=\"_blank\"; style = color:white;>" + game.external + "</a>";
                 html += "<p class=\"price\">Prezzo: " + game.cheapest + "</p>";
+                html += "<div class=\"popup\" onclick=\"popup()\">Visualizza dettagli";
+                html += "<span class=\"popuptext\" id=\"dettagli\">Dettagli gioco: " + game.title + "</span>";
+                html += "</div>";
                 html += "</div>";
             });
             console.log(data);
@@ -45,3 +48,8 @@ document.getElementById("searchInput").addEventListener("keyup", function(e) {
         cerca();
     }
 });
+
+function popup(){
+    var dettagli = document.getElementById("myPopup");
+    dettagli.classList.toggle("show");
+}
