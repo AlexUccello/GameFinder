@@ -15,11 +15,11 @@ async function cerca(){
             document.getElementById("results").innerHTML = html;
         } else {
             data.forEach(game => {
-                html += "<div class='game' onclick=\"clickGioco("+ game.gameID + ")\"; style=color:white;>";
+                html += "<div class='game' style=color:white;>";
                 html += "<img src=" + game.thumb + " class=\"thumb\">";
                 html += "<a href=\"https://www.cheapshark.com/redirect?dealID=" + game.cheapestDealID + "\" class=\"title\" target=\"_blank\"; style = color:white;>" + game.external + "</a>";
                 html += "<p class=\"price\">Prezzo: " + game.cheapest + "</p>";
-                html += "<div class=\"popup\" onclick=\"popup()\">Visualizza dettagli";
+                html += "<div class=\"popup\" onclick=\"clickGioco("+ game.gameID + ")\";>Visualizza dettagli";
                 html += "<span class=\"popuptext\" id=\"dettagli\">Dettagli gioco: " + game.title + "</span>";
                 html += "</div>";
                 html += "</div>";
