@@ -63,7 +63,7 @@ async function popolaPagina(){
     const data = await response.json();
 
 
-// Costante che permette la popolazione della pagina Dettagli
+// Contiene la lista dei negozi
     const stores = getStores();
     if(data.length < 1){
         html += "<div class='notfound'>Nessun gioco trovato</div>"; // Mostrato quando ID = 0
@@ -76,17 +76,17 @@ async function popolaPagina(){
 
         var html = "";
         var html_lista_stores = "";
-        const trovaStorePerID = JSON.parse(stores); // Converte l'array del JSON in una lista di oggetti JavaScript
+        const listaStore = JSON.parse(stores); // Converte l'array del JSON in una lista di oggetti JavaScript
 
         data.deals.forEach(store => {
             html += '<p>' + store.price + '</>'; // Prezzo del gioco per ogni store
 
-            const cercaPerID = trovaStorePerID.find(store_l => store_l.storeID == store.storeID); // Trova il nome dello Store all'interno del JSON tramite il suo ID
+            const storeTrovato = listaStore.find(storeTrovato => storeTrovato.storeID == store.storeID); // Trova il nome dello Store all'interno del JSON tramite il suo ID
 
             // Popola la lista dei negozi all'interno della pagina Dettagli
             html_lista_stores +=
            `<div>
-                <p> ${cercaPerID.storeName}</p>
+                <p> ${storeTrovato.storeName}</p>
            </div>`
 
         });
