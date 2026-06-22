@@ -18,7 +18,7 @@ async function cerca(){
                 html += "<div class='game' style=color:white;>";
                 html += "<img src=" + game.thumb + " class=\"thumb\">";
                 html += "<a href=\"https://www.cheapshark.com/redirect?dealID=" + game.cheapestDealID + "\" class=\"title\" target=\"_blank\"; style = color:white;>" + game.external + "</a>";
-                html += "<p class=\"price\">Prezzo: " + game.cheapest + "</p>";
+                html += "<p class=\"price\">Prezzo: " + "€" + game.cheapest + "</p>";
                 html += "<div class=\"popup\" onclick=\"clickGioco("+ game.gameID + ")\";>Visualizza dettagli";
                 html += "</div>";
                 html += "</div>";
@@ -71,7 +71,7 @@ async function popolaPagina(){
     } else {
         document.getElementById("ng").innerHTML = data.info.title; // nome del gioco
         document.getElementById("img").src = data.info.thumb; // immagine del gioco
-        document.getElementById("pr").innerHTML = data.cheapestPriceEver.price; // prezzo più basso del gioco
+        document.getElementById("pr").innerHTML = "€" + data.cheapestPriceEver.price; // prezzo più basso del gioco
 
 
         var html = "";
