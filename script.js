@@ -71,10 +71,9 @@ async function popolaPagina(){
     } else {
         document.getElementById("ng").innerHTML = data.info.title; // nome del gioco
         document.getElementById("img").src = data.info.thumb; // immagine del gioco
-
         document.getElementById("pr").innerHTML = "€" + data.cheapestPriceEver.price; // prezzo più basso del gioco
         document.getElementById("stores").innerHTML = data.deals.length + " negozi che vendono il gioco"; // numero di siti che vendono il gioco
-    
+        document.getElementById("listaStores").innerHTML = "" + html_lista_stores; // Lista dei negozi
 
         var html = "";
         var html_lista_stores = "";
@@ -92,7 +91,7 @@ async function popolaPagina(){
            </div>`
 
         });
-        document.getElementById("stores").innerHTML = html_lista_stores; // Lista dei negozi
+
     }
 
 
