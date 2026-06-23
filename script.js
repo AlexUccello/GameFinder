@@ -64,7 +64,7 @@ async function popolaPagina(){
 
 
 // Contiene la lista dei negozi
-    const stores = getStores();
+    const stores = await getStores();
     if(data.length < 1){
         html += "<div class='notfound'>Nessun gioco trovato</div>"; // Mostrato quando ID = 0
         document.getElementById("error").innerHTML = html;
@@ -73,22 +73,23 @@ async function popolaPagina(){
         document.getElementById("img").src = data.info.thumb; // immagine del gioco
         document.getElementById("pr").innerHTML = "€" + data.cheapestPriceEver.price; // prezzo più basso del gioco
         document.getElementById("stores").innerHTML = data.deals.length + " negozi che vendono il gioco"; // numero di siti che vendono il gioco
-        document.getElementById("listaStores").innerHTML = html_lista_stores; // Lista dei negozi
+        
 
         var html = "";
         var html_lista_stores = "";
-        const listaStore = JSON.parse(stores); // Converte l'array del JSON in una lista di oggetti JavaScript
+        //const listaStore = JSON.parse(stores); // Converte l'array del JSON in una lista di oggetti JavaScript
 
         data.deals.forEach(store => {
             html += '<p>' + store.price + '</>'; // Prezzo del gioco per ogni store
 
-            const storeTrovato = listaStore.find(storeTrovato => storeTrovato.storeID == store.storeID); // Trova il nome dello Store all'interno del JSON tramite il suo ID
+            const storeTrovato = stores.find(storeTrovato => storeTrovato.storeID == store.storeID); // Trova il nome dello Store all'interno del JSON tramite il suo ID
 
             // Popola la lista dei negozi all'interno della pagina Dettagli
             html_lista_stores +=
            `<div>
                 <p> ${storeTrovato.storeName}</p>
            </div>`
+        document.getElementById("listaStores").innerHTML = html_lista_stores; // Lista dei negozi
 
         });
 
