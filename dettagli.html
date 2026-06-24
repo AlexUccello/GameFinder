@@ -1,21 +1,45 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Dettagli Gioco</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Dettagli Gioco — GameFinder</title>
 </head>
 <body>
-    <div id="error"></div>
-    <h2 id="ng"></h2>
-    <img id="img">
-    <h2 id="pr"></h2>
-    <div id="stores"></div>
-</body>
+
+<nav class="topnav">
+  <a class="nav-logo" href="index.html">GameFinder</a>
+  <div class="nav-links">
+    <a class="nav-link" href="index.html">Ricerca</a>
+    <a class="nav-link fav-link" href="preferiti.html">&#9829; Preferiti</a>
+  </div>
+</nav>
+
+<div id="loader-wrap" class="loader-wrap">
+  <div class="spinner"></div>
+  <p>Caricamento dettagli...</p>
+</div>
+
+<div id="error-box" class="error-box">
+  <p id="error-msg">Gioco non trovato.</p>
+</div>
+
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <img id="game-thumb" class="hero-thumb" src="" alt="">
+    <div class="hero-info">
+      <h1 class="hero-title" id="game-title"></h1>
+      <div class="stats-row" id="stats-row"></div>
+    </div>
+  </div>
+</section>
+
+<section class="deals-section" id="deals-section">
+  <p class="section-label">Offerte disponibili</p>
+  <div class="deals-grid" id="deals-grid"></div>
+</section>
+
 <script src="script.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-    popolaPagina();
-});
-</script>
+</body>
 </html>

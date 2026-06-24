@@ -1,27 +1,47 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>GameFinder</title>
 </head>
 <body>
-    <h1>Game Finder</h1>
-    <p style="font-size: 18px;">Trova i migliori giochi con sconti esclusivi!</p>
-    <h2>Ricerca per Nome</h2>
-    <input class="search" placeholder="Inserisci il nome del gioco" id="searchInput">
-    <button class = "cerca" onclick="cerca()">CERCA</button>
-    <h2>Siti Affidabili</h2>
-        <nav>
-        <a href="https://store.steampowered.com/?l=italian" target="_blank"; style="color: white; ">Steam</a> |
-        <a href="https://www.epicgames.com/store/it/" target="_blank" style="color: white;">Epic Games Store</a> |
-        <a href="https://www.gog.com/" target="_blank" style="color: white;">GOG</a> |
-        <a href="https://www.microsoft.com/it-it/store/b/xbox" target="_blank" style="color: white;">Microsoft Store</a> |
-        <a href="https://www.rockstargames.com/" target="_blank" style="color: white;">Rockstar Games</a>
-        </nav>
-    <h2>Giochi in Evidenza</h2>
-<div id="results"></div>
-<div class="loader"></div>
-</body>
+
+<nav class="topnav">
+  <a class="nav-logo" href="index.html">GameFinder</a>
+  <div class="nav-links">
+    <a class="nav-link active" href="index.html">Ricerca</a>
+    <a class="nav-link fav-link" href="preferiti.html">&#9829; Preferiti</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Trova il prezzo migliore</h1>
+  <p>Confronta i prezzi dei tuoi giochi su tutti i principali store.</p>
+</div>
+
+<div class="search-wrap">
+  <input class="search" id="searchInput" placeholder="Cerca un gioco..." autocomplete="off">
+  <button class="cerca" onclick="cerca()">Cerca</button>
+</div>
+
+<div class="stores-section">
+  <p class="section-label">Store affidabili</p>
+  <div class="store-links">
+    <a href="https://store.steampowered.com/?l=italian" target="_blank" rel="noopener">Steam</a>
+    <a href="https://www.epicgames.com/store/it/" target="_blank" rel="noopener">Epic Games</a>
+    <a href="https://www.gog.com/" target="_blank" rel="noopener">GOG</a>
+    <a href="https://www.microsoft.com/it-it/store/b/xbox" target="_blank" rel="noopener">Microsoft Store</a>
+    <a href="https://www.rockstargames.com/" target="_blank" rel="noopener">Rockstar Games</a>
+  </div>
+</div>
+
+<div class="results-section">
+  <div class="loader" id="loader"></div>
+  <div id="results"></div>
+</div>
+
 <script src="script.js"></script>
+</body>
 </html>
